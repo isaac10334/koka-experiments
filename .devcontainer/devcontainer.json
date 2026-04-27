@@ -1,7 +1,8 @@
 {
   "name": "Koka",
-  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-24.04",
-  "postCreateCommand": "curl -sSL https://github.com/koka-lang/koka/releases/latest/download/install.sh | sh && echo 'export PATH=\"$HOME/.koka/bin:$PATH\"' >> ~/.bashrc",
+  "build": {
+    "dockerfile": "Dockerfile"
+  },
   "customizations": {
     "vscode": {
       "extensions": ["koka.language-koka"]
